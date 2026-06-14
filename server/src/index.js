@@ -54,6 +54,10 @@ app.get('/api/room/:roomId', (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+    res.send("P2P Web Share Signaling Server is running!! yayayaya bang bang bang bang broooo!");
+});
+
 // Socket.io
 io.on('connection', (socket) => {
   console.log(`[${new Date().toISOString()}] Peer connected: ${socket.id}`);
